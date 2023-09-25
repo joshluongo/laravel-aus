@@ -1,36 +1,28 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace LaravelAus\LaravelAus\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
+use Faker\Factory;
+use Faker\Generator;
+use LaravelAus\LaravelAus\Fakers\AbnAcnProvider;
+use LaravelAus\LaravelAus\LaravelAusServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use VendorName\Skeleton\SkeletonServiceProvider;
 
 class TestCase extends Orchestra
 {
+    public Generator $faker;
+
     protected function setUp(): void
     {
-        parent::setUp();
-
-        Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'VendorName\\Skeleton\\Database\\Factories\\'.class_basename($modelName).'Factory'
-        );
+        $faker = Factory::create();
+        $this->faker->addProvider(new AbnAcnProvider($faker));
+        $this->faker = $faker;
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            SkeletonServiceProvider::class,
+            LaravelAusServiceProvider::class,
         ];
-    }
-
-    public function getEnvironmentSetUp($app)
-    {
-        config()->set('database.default', 'testing');
-
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
-        $migration->up();
-        */
     }
 }

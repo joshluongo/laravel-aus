@@ -15,7 +15,7 @@ class TestCase extends Orchestra
     protected function setUp(): void
     {
         $faker = Factory::create();
-        $this->faker->addProvider(new AbnAcnProvider($faker));
+        $faker->addProvider(new AbnAcnProvider($faker));
         $this->faker = $faker;
     }
 

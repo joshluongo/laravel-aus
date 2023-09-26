@@ -10,10 +10,10 @@ test('format acn', function () {
     expect(AbnAcnFormatter::formatAcn('004085616'))->toBe('004 085 616');
 });
 
-it('invalid abn raises exception', function () {
-    AbnAcnFormatter::formatAbn('invalid');
-})->throws(\LuongoLabs\LaravelAus\Exceptions\InvalidInputException::class);
+test('invalid abn returns null', function () {
+    expect(AbnAcnFormatter::formatAbn('invalid'))->toBeNull();
+});
 
-it('invalid acn raises exception', function () {
-    AbnAcnFormatter::formatAcn('invalid');
-})->throws(\LuongoLabs\LaravelAus\Exceptions\InvalidInputException::class);
+test('invalid acn returns null', function () {
+    expect(AbnAcnFormatter::formatAcn('invalid'))->toBeNull();
+});

@@ -2,6 +2,8 @@
 
 namespace LuongoLabs\LaravelAus\Fakers;
 
+use LuongoLabs\LaravelAus\Formatters\AbnAcnFormatter;
+
 class AbnAcnProvider extends \Faker\Provider\Base
 {
     /**
@@ -31,12 +33,7 @@ class AbnAcnProvider extends \Faker\Provider\Base
         $number = ((89 - ($sum % 89)) + 10).$acn;
 
         if ($formatted) {
-            // Format: 00 000 000 000
-            $p1 = substr($number, 0, 2);
-            $p2 = substr($number, 2, 3);
-            $p3 = substr($number, 5, 3);
-            $p4 = substr($number, 8);
-            $number = $p1.$separator.$p2.$separator.$p3.$separator.$p4;
+            $number = AbnAcnFormatter::formatAbn($number, $separator);
         }
 
         return $number;
@@ -63,11 +60,7 @@ class AbnAcnProvider extends \Faker\Provider\Base
         $number = $random.((10 - ($sum % 10)) % 10);
 
         if ($formatted) {
-            // Format: 000 000 000
-            $p1 = substr($number, 0, 3);
-            $p2 = substr($number, 3, 3);
-            $p3 = substr($number, 6, 3);
-            $number = $p1.$separator.$p2.$separator.$p3.$separator;
+            $number = AbnAcnFormatter::formatAcn($number, $separator);
         }
 
         return $number;

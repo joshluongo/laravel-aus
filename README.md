@@ -23,7 +23,7 @@ php artisan vendor:publish --tag="laravel-aus-lang"
 ```php
 // Register in your test case file
 $faker = \Faker\Factory::create();
-$faker->addProvider(new \LaravelAus\LaravelAus\Fakers\AbnAcnProvider($faker));
+$faker->addProvider(new \LuongoLabs\LaravelAus\Fakers\AbnAcnProvider($faker));
 $this->faker = $faker;
 
 // Get random valid ABN/ACN
@@ -35,8 +35,8 @@ $this->faker->acn; // 123 456 789
 
 ```php
 Validator::make($request->all(), [
-    'abn' => new \LaravelAus\LaravelAus\Rules\Abn(),
-    'acn' => new \LaravelAus\LaravelAus\Rules\Acn(),
+    'abn' => new \LuongoLabs\LaravelAus\Rules\Abn(),
+    'acn' => new \LuongoLabs\LaravelAus\Rules\Acn(),
 ])->validate();
 ```
 

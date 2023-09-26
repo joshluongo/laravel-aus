@@ -36,12 +36,12 @@
     },
     "autoload": {
         "psr-4": {
-            "LaravelAus\\LaravelAus\\": "src/"
+            "LuongoLabs\\LaravelAus\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "LaravelAus\\LaravelAus\\Tests\\": "tests/",
+            "LuongoLabs\\LaravelAus\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -72,11 +72,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelAus\\LaravelAus\\LaravelAusServiceProvider"
-            ],
-            "aliases": {
-                "LaravelAus": "LaravelAus\\LaravelAus\\Facades\\LaravelAus"
-            }
+                "LuongoLabs\\LaravelAus\\LaravelAusServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",

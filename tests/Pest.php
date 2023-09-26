@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Contracts\Validation\ValidationRule;
-use LaravelAus\LaravelAus\Tests\TestCase;
+use LuongoLabs\LaravelAus\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);
 

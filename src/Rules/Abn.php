@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelAus\LaravelAus\Rules;
+namespace LuongoLabs\LaravelAus\Rules;
 
 use Closure;
 use Illuminate\Contracts\Validation\ValidationRule;

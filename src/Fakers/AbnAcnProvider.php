@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelAus\LaravelAus\Fakers;
+namespace LuongoLabs\LaravelAus\Fakers;
 
 class AbnAcnProvider extends \Faker\Provider\Base
 {

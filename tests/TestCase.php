@@ -1,11 +1,11 @@
 <?php
 
-namespace LaravelAus\LaravelAus\Tests;
+namespace LuongoLabs\LaravelAus\Tests;
 
 use Faker\Factory;
 use Faker\Generator;
-use LaravelAus\LaravelAus\Fakers\AbnAcnProvider;
-use LaravelAus\LaravelAus\LaravelAusServiceProvider;
+use LuongoLabs\LaravelAus\Fakers\AbnAcnProvider;
+use LuongoLabs\LaravelAus\LaravelAusServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra

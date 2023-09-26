@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelAus\LaravelAus;
+namespace LuongoLabs\LaravelAus;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;

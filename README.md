@@ -13,7 +13,7 @@ composer require joshluongo/laravel-aus
 Optionally, you can publish the translations using
 
 ```bash
-php artisan vendor:publish --tag="laravel-aus-translations"
+php artisan vendor:publish --tag="aus-translations"
 ```
 
 ## Usage

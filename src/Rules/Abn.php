@@ -26,7 +26,7 @@ class Abn implements ValidationRule
 
         // Check that the ABN is exactly 11 characters long
         if (strlen($abn) !== 11) {
-            $fail(Lang::get('laravel-aus::laravel-aus.abn.length'));
+            $fail(Lang::get('laravel-aus::messages.abn_length'));
 
             return;
         }
@@ -42,7 +42,7 @@ class Abn implements ValidationRule
 
         // Check if the sum is divisible by 89
         if ($sum % 89 !== 0) {
-            $fail(Lang::get('laravel-aus::laravel-aus.abn.invalid'));
+            $fail(Lang::get('laravel-aus::messages.abn_invalid'));
         }
     }
 }

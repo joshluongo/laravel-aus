@@ -13,7 +13,7 @@ composer require joshluongo/laravel-aus
 Optionally, you can publish the translations using
 
 ```bash
-php artisan vendor:publish --tag="laravel-aus-lang"
+php artisan vendor:publish --tag="laravel-aus-translations"
 ```
 
 ## Usage
@@ -21,14 +21,14 @@ php artisan vendor:publish --tag="laravel-aus-lang"
 ### Faker
 
 ```php
-// Register in your test case file
-$faker = \Faker\Factory::create();
-$faker->addProvider(new \LuongoLabs\LaravelAus\Fakers\AbnAcnProvider($faker));
-$this->faker = $faker;
+// Register in your seeder file
+public function configure(): OrganisationFactory|static
+{
+    // Inject ABN and ACN providers.
+    $this->faker->addProvider(new \LuongoLabs\LaravelAus\Fakers\AbnAcnProvider($this->faker));
 
-// Get random valid ABN/ACN
-$this->faker->abn; // 12 123 456 789
-$this->faker->acn; // 123 456 789
+    return $this;
+}
 ```
 
 ### Validation

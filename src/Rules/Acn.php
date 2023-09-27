@@ -26,7 +26,7 @@ class Acn implements ValidationRule
 
         // Check that the ACN is exactly 9 characters long
         if (strlen($acn) !== 9) {
-            $fail(Lang::get('laravel-aus::translations.acn_length'));
+            $fail(Lang::get('aus::translations.acn_length'));
 
             return;
         }
@@ -50,7 +50,7 @@ class Acn implements ValidationRule
 
         // Check if the last digit of the ACN matches the complement
         if ($acn[8] !== (string) $complement) {
-            $fail(Lang::get('laravel-aus::translations.acn_invalid'));
+            $fail(Lang::get('aus::translations.acn_invalid'));
         }
     }
 }

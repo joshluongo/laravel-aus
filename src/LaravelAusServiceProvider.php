@@ -2,6 +2,7 @@
 
 namespace LuongoLabs\LaravelAus;
 
+use LuongoLabs\LaravelAus\Dates\FinancialYearMacros;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -17,5 +18,10 @@ class LaravelAusServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-aus')
             ->hasTranslations();
+    }
+
+    public function packageRegistered(): void
+    {
+        FinancialYearMacros::register();
     }
 }

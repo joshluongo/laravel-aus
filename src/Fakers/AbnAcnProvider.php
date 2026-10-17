@@ -2,9 +2,10 @@
 
 namespace LuongoLabs\LaravelAus\Fakers;
 
+use Faker\Provider\Base;
 use LuongoLabs\LaravelAus\Formatters\AbnAcnFormatter;
 
-class AbnAcnProvider extends \Faker\Provider\Base
+class AbnAcnProvider extends Base
 {
     /**
      * Generate a random Australian Business Number (ABN).
@@ -13,8 +14,8 @@ class AbnAcnProvider extends \Faker\Provider\Base
      *
      * This follows format set out at https://abr.business.gov.au/Help/AbnFormat
      *
-     * @param  bool  $formatted Whether to return the ABN in a formatted way.
-     * @param  string  $separator The separator to use when formatting the ABN.
+     * @param  bool  $formatted  Whether to return the ABN in a formatted way.
+     * @param  string  $separator  The separator to use when formatting the ABN.
      */
     public function abn(bool $formatted = false, string $separator = ' '): string
     {

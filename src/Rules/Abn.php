@@ -15,7 +15,7 @@ class Abn implements ValidationRule
     /**
      * Run the validation rule.
      *
-     * @param  \Closure(string): PotentiallyTranslatedStringAlias  $fail
+     * @param  Closure(string): PotentiallyTranslatedStringAlias  $fail
      */
     public function validate(string $attribute, mixed $value, Closure $fail): void
     {

@@ -9,9 +9,9 @@ class AbnAcnFormatter
      *
      * XX XXX XXX XXX
      *
-     * @param  ?string  $input The ABN to format, this should be 11 digits long.
-     * @param  string  $separator The separator to use when formatting the ABN.
-     * @return  ?string  The formatted ABN or null if the input is invalid or null.
+     * @param  ?string  $input  The ABN to format, this should be 11 digits long.
+     * @param  string  $separator  The separator to use when formatting the ABN.
+     * @return ?string The formatted ABN or null if the input is invalid or null.
      */
     public static function formatAbn(?string $input, string $separator = ' '): ?string
     {
@@ -27,9 +27,9 @@ class AbnAcnFormatter
      *
      * XXX XXX XXX
      *
-     * @param  ?string  $input The ACN to format, this should be 9 digits long.
-     * @param  string  $separator The separator to use when formatting the ACN.
-     * @return  ?string  The formatted ABN or null if the input is invalid or null.
+     * @param  ?string  $input  The ACN to format, this should be 9 digits long.
+     * @param  string  $separator  The separator to use when formatting the ACN.
+     * @return ?string The formatted ABN or null if the input is invalid or null.
      */
     public static function formatAcn(?string $input, string $separator = ' '): ?string
     {
